@@ -8,6 +8,7 @@ jobs:
     steps:
       - run: git clone https://github.com/univdev/recommends
       - run: cd recommends
+      - run: ls -f
       - run: touch example.txt
       - run: git commit -m "feat 테스트 파일 추가"
       - run: git push origin master
