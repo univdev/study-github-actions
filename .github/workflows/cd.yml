@@ -9,5 +9,5 @@ jobs:
       - run: git clone https://github.com/univdev/recommends
       - run: cd recommends
       - run: touch example.txt
-      - run: git commit -m "feat: 테스트 파일 추가"
+      - run: git commit -m "feat 테스트 파일 추가"
       - run: git push origin master
