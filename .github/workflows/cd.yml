@@ -14,6 +14,9 @@ jobs:
       - name: test.txt 파일 추가
         working-directory: ./recommends
         run: touch test.txt
+      - name: git 정보 설정
+        working-directory: ./recommends
+        run: git config --global user.email "you@example.com" && git config --global user.name "Your Name"
       - name: 커밋 추가
         working-directory: ./recommends
         run: git commit -m "text.txt 파일 추가"
