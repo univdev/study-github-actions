@@ -6,7 +6,8 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.TOKEN }}
     steps:
-      - run: echo "git clone https://github.com/univdev/recommends"
       - run: git clone https://github.com/univdev/recommends
-      - run: echo "ls"
-      - run: ls
+      - run: cd recommends
+      - run: touch example.txt
+      - run: git commit -m "feat: 테스트 파일 추가"
+      - run: git push origin master
