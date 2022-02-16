@@ -6,13 +6,9 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.TOKEN }}
     steps:
-      - uses: actions/checkout@master
-        with:
-          name: 'univdev/recommends'
-      # - run: git clone https://github.com/univdev/recommends
-      # - run: ls -f
-      # - run: cd recommends
-      # - run: ls -f
-      # - run: touch example.txt
-      # - run: git commit -m "feat 테스트 파일 추가"
-      # - run: git push origin master
+      - name: recommends 레포지토리 클론
+        run: git clone https://github.com/univdev/recommends
+      - name: recommends 폴더 이동
+        run: cd recommends
+      - name: recommends 폴더 구조 출력
+        run: ls -f
