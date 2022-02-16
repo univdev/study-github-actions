@@ -3,8 +3,6 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.TOKEN }}
     steps:
       - name: recommends 레포지토리 클론
         run: git clone https://github.com/univdev/recommends
@@ -25,4 +23,6 @@ jobs:
         run: git commit -m "text.txt 파일 추가"
       - name: 레포지토리 푸시
         working-directory: ./recommends
-        run: git push origin master
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
