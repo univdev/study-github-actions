@@ -9,6 +9,7 @@ jobs:
       - name: recommends 레포지토리 클론
         run: git clone https://github.com/univdev/recommends
       - name: recommends 폴더 이동
-        run: cd recommends
+        working-directory: ./recommends
       - name: recommends 폴더 구조 출력
+        working-directory: ./recommends
         run: ls -f
