@@ -11,3 +11,12 @@ jobs:
       - name: recommends 폴더 구조 출력
         working-directory: ./recommends
         run: ls -f
+      - name: test.txt 파일 추가
+        working-directory: ./recommends
+        run: touch test.txt
+      - name: 커밋 추가
+        working-directory: ./recommends
+        run: git commit -m "text.txt 파일 추가"
+      - name: 레포지토리 푸시
+        working-directory: ./recommends
+        run: git push origin master
