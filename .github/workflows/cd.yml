@@ -7,6 +7,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.TOKEN }}
     steps:
       - run: git clone https://github.com/univdev/recommends
+      - run: ls -f
       - run: cd recommends
       - run: ls -f
       - run: touch example.txt
